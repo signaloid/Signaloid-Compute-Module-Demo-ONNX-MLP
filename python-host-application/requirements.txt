@@ -1,0 +1,5 @@
+argcomplete
+onnx
+signaloid-utilities @ git+https://github.com/signaloid/Signaloid-Compute-Module-Utilities.git
+signaloid @ git+https://github.com/signaloid/signaloid-python.git
+
