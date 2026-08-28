@@ -1,0 +1,19 @@
+.DS_Store
+.vscode
+
+
+# Python
+.env
+.venv
+__pycache__
+
+# Node
+node_modules
+package.json
+package-lock.json
+
+# Signaloid CLI cloud-build artifacts
+.repo_id
+.build_id
+*.bin
+

@@ -1,0 +1,4 @@
+[submodule "submodules/Signaloid-Compute-Module-Utilities"]
+	path = submodules/Signaloid-Compute-Module-Utilities
+	url = ../../signaloid/Signaloid-Compute-Module-Utilities.git
+	branch = main
