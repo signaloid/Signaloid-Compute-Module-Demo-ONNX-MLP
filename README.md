@@ -1,7 +1,11 @@
 # Signaloid-Compute-Module-Demo-ONNX-MLP
 
-This is a demo application for the Signaloid compute modules implementing a
-simple ONNX model inference.
+This is a demo application for the Signaloid compute modules implementing
+inference of Multi-Layer Perceptron (MLP) neural networks encoded in the ONNX
+format. The network accepts arbitrary probability distributions as inputs. The
+Signaloid UxHw technology propagates the distributions through the compute graph
+of the network. The network outputs are probability distributions, which
+contribute in the network's explainability and output trustworthiness.
 
 The default model (`signaloid-soc-application/model_a.onnx`) implements a simple
 Multilayer Perceptron (MLP) type neural network. The network comprises several
