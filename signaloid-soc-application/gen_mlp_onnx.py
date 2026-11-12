@@ -146,7 +146,13 @@ def gen_model(
         outputs=[Y],
         initializer=initializer,
     )
-    onnx_model = onnx.helper.make_model(graph)
+    # Pin the opset and IR version, so a newer onnx package regenerates the
+    # committed model byte for byte.
+    onnx_model = onnx.helper.make_model(
+        graph,
+        opset_imports=[onnx.OperatorSetIdProto(version=27)],
+        ir_version=13,
+    )
     onnx.checker.check_model(onnx_model)
 
     print(f"- Model Depth : {len(layer_sizes):>7}")
@@ -202,7 +208,7 @@ def gen_header_file(
     text += "\n"
     text += "\n"
     text += "OMTensorList *\n"
-    text += f"run_main_graph_{model_name}(OMTensorList *);"
+    text += f"run_main_graph_{model_name}(OMTensorList *);\n"
 
     with open(header_path, "w") as f:
         f.write(text)
